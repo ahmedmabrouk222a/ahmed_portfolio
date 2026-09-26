@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Portal — Ahmed Mabrouk Messages & Inquiries</title>
+  <meta name="description" content="Private admin dashboard to view, manage, and reply to client inquiries and portfolio contact messages.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- ADMIN AUTHENTICATION / LOCK OVERLAY -->
+  <div class="admin-auth-overlay" id="admin-auth-overlay" aria-modal="true" role="dialog">
+    <div class="auth-card">
+      <div class="auth-badge-icon">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <h2 class="auth-title">Admin Access Required</h2>
+      <p class="auth-subtitle">أهلاً أحمد، يرجى إدخال كلمة المرور للوصول إلى لوحة التحكم والرسائل</p>
+
+      <form id="admin-login-form" class="auth-form" onsubmit="return false;">
+        <div class="auth-input-wrapper">
+          <i class="fa-solid fa-lock auth-input-icon"></i>
+          <input type="password" id="admin-pass-input" class="auth-input" placeholder="Enter password (e.g. 8080)" autocomplete="current-password" autofocus required>
+          <button type="button" class="auth-eye-btn" id="toggle-pass-visibility" title="Show / Hide Password" aria-label="Toggle password visibility">
+            <i class="fa-solid fa-eye" id="eye-icon"></i>
+          </button>
+        </div>
+
+        <div class="auth-error-msg" id="auth-error-msg"></div>
+
+        <button type="submit" class="btn btn-primary auth-submit-btn" id="btn-admin-login">
+          <span>دخول / Unlock Dashboard</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+
+      <div class="auth-footer-actions">
+        <a href="index.html" class="auth-back-link">
+          <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP ADMIN NAVBAR -->
+  <header class="admin-topbar">
+    <div class="admin-container topbar-flex">
+      <div class="admin-brand">
+        <a href="index.html" class="brand-logo">
+          <span class="logo-text">Ahmed Mabrouk</span>
+          <span class="logo-dot"></span>
+        </a>
+        <div class="admin-badge">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Admin Portal & Inbox</span>
+        </div>
+      </div>
+
+      <div class="admin-top-actions">
+        <button class="btn btn-secondary btn-sm" id="btn-create-test" title="Generate a test inquiry">
+          <i class="fa-solid fa-plus"></i>
+          <span>Add Test Inquiry</span>
+        </button>
+        <button class="btn btn-secondary btn-sm" id="btn-export-csv" title="Export messages to CSV">
+          <i class="fa-solid fa-file-csv"></i>
+          <span>Export CSV</span>
+        </button>
+        <button class="btn btn-secondary btn-sm text-danger" id="btn-clear-all" title="Clear all messages">
+          <i class="fa-solid fa-trash-can"></i>
+          <span>Clear All</span>
+        </button>
+        <button class="btn btn-secondary btn-sm" id="btn-admin-logout" title="Lock Dashboard">
+          <i class="fa-solid fa-lock"></i>
+          <span>Lock</span>
+        </button>
+        <a href="index.html" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to Portfolio</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN ADMIN DASHBOARD -->
+  <main class="admin-main">
+    <div class="admin-container">
+      
+      <!-- HERO HEADER TITLE -->
+      <div class="admin-header-row">
+        <div>
+          <h1 class="admin-page-title">Client Inquiries & Messages</h1>
+          <p class="admin-page-subtitle">Real-time incoming communications submitted from the portfolio contact form.</p>
+        </div>
+        <div class="live-pulse-badge">
+          <span class="live-dot"></span>
+          <span>Live Sync Active</span>
+        </div>
+      </div>
+
+      <!-- STATS METRICS ROW -->
+      <section class="admin-stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon-wrap total">
+            <i class="fa-solid fa-inbox"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-count" id="stat-total">0</span>
+            <span class="stat-tag">Total Inquiries</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrap unread">
+            <i class="fa-solid fa-envelope-open-text"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-count" id="stat-unread">0</span>
+            <span class="stat-tag">Unread Messages</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrap today">
+            <i class="fa-solid fa-calendar-day"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-count" id="stat-today">0</span>
+            <span class="stat-tag">Today's Inquiries</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrap topic">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-count text-truncate" id="stat-top-topic">—</span>
+            <span class="stat-tag">Top Inquired Topic</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEARCH & FILTER TOOLBAR -->
+      <section class="admin-filter-toolbar">
+        <div class="search-input-wrap">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="admin-search-input" placeholder="Search by sender name, email, or message keyword...">
+          <button class="clear-search-btn" id="clear-search-btn" title="Clear search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="filter-controls">
+          <select id="status-filter" class="admin-select">
+            <option value="all">All Messages</option>
+            <option value="unread">Unread Only</option>
+            <option value="read">Read Only</option>
+          </select>
+
+          <select id="topic-filter" class="admin-select">
+            <option value="all">All Topics</option>
+            <option value="AI & Machine Learning Solution">AI & Machine Learning</option>
+            <option value="Front-End / React Web Application">Front-End & React</option>
+            <option value="End-to-End AI Web App Integration">AI Web App Integration</option>
+            <option value="Full-Time / Contract Role Discussion">Hiring & Roles</option>
+            <option value="Other Inquiry">Other Inquiries</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- MESSAGES LIST CONTAINER -->
+      <section class="messages-container" id="messages-container">
+        <!-- Messages rendered dynamically via admin.js -->
+      </section>
+
+    </div>
+  </main>
+
+  <!-- MESSAGE DETAIL MODAL -->
+  <div class="modal-backdrop" id="admin-message-modal" aria-hidden="true" role="dialog">
+    <div class="modal-card admin-modal-card">
+      <button class="modal-close-btn" id="admin-modal-close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="admin-modal-content" id="admin-modal-content">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notification" id="admin-toast" role="status"></div>
+
+  <!-- Scripts -->
+  <script src="admin.js"></script>
+</body>
+</html>

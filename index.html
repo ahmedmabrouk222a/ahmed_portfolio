@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Mabrouk | AI Engineer & Front-End Developer</title>
+  <meta name="description"
+    content="Portfolio of Ahmed Mabrouk — AI Engineer, Data Scientist, and React.js Front-End Developer specializing in Machine Learning, Deep Learning, Generative AI, and high-performance web applications.">
+  <meta name="keywords"
+    content="Ahmed Mabrouk, AI Engineer, Machine Learning, Data Science, React Developer, Deep Learning, Beni Suef, Egypt">
+  <meta name="author" content="Ahmed Mabrouk">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background Ambient Glow Accents -->
+  <div class="ambient-glow ambient-glow-top"></div>
+  <div class="ambient-glow ambient-glow-bottom"></div>
+
+  <!-- NAVIGATION -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" id="brand-logo">
+        <span class="logo-text">Ahmed Mabrouk</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <nav class="desktop-nav" id="desktop-nav">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#works" class="nav-link">Selected Works</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- CV Download Dropdown -->
+        <div class="dropdown" id="cv-dropdown">
+          <button class="btn btn-secondary dropdown-btn" id="cv-dropdown-btn">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span>Resume</span>
+            <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </button>
+          <div class="dropdown-menu" id="cv-dropdown-menu">
+            <a href="Ahmed_Mabrouk_AI_DataScience_CV.docx" download class="dropdown-item" id="download-ai-cv">
+              <div class="dropdown-item-icon ai"><i class="fa-solid fa-brain"></i></div>
+              <div class="dropdown-item-text">
+                <strong>AI & Data Science CV</strong>
+                <span>Word (.docx) — Full Technical</span>
+              </div>
+            </a>
+            <a href="Ahmed_Mabrouk_CV.pdf" download class="dropdown-item" id="download-fe-cv">
+              <div class="dropdown-item-icon fe"><i class="fa-solid fa-code"></i></div>
+              <div class="dropdown-item-text">
+                <strong>Front-End Developer CV</strong>
+                <span>PDF (.pdf) — React & Web</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary header-cta-btn" id="header-talk-btn">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="mobile-drawer-inner">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#works" class="mobile-link">Selected Works</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <div class="mobile-cv-group">
+          <span class="mobile-cv-label">Download Resume:</span>
+          <a href="Ahmed_Mabrouk_AI_DataScience_CV.docx" download class="btn btn-secondary full-width">
+            <i class="fa-solid fa-brain"></i> AI & Data Science CV
+          </a>
+          <a href="Ahmed_Mabrouk_CV.pdf" download class="btn btn-secondary full-width">
+            <i class="fa-solid fa-code"></i> Front-End Developer CV
+          </a>
+        </div>
+        <a href="#contact" class="btn btn-primary full-width">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-header-content">
+        <div class="hero-top-badge" id="hero-status-badge">
+          <span class="badge-star"><i class="fa-solid fa-sparkles"></i></span>
+          <span>AI & Data Science Engineer</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-intro">Hi, I'm Ahmed</span>
+          <span class="hero-role">AI & Data Science Engineer</span>
+        </h1>
+      </div>
+
+      <div class="hero-interactive-stage">
+        <!-- Floating Left Badge -->
+        <div class="hero-float-badge float-left" id="status-pill">
+          <span class="status-indicator"></span>
+          <span class="float-text">Available for new opportunities</span>
+        </div>
+
+        <!-- Floating Right Text -->
+        <div class="hero-float-badge float-right" id="bio-pill">
+          <span class="float-icon"><i class="fa-solid fa-sparkles"></i></span>
+          <span class="float-text">Building intelligent solutions through AI, Data Science, Machine Learning, and modern
+            Software Engineering.</span>
+        </div>
+
+        <!-- Center Portrait Photo (Original file, enlarged, natural colors) -->
+        <div class="hero-photo-wrapper">
+          <img src="ahmed-portrait.png" alt="Ahmed Mabrouk - AI & Data Science Engineer" class="hero-portrait-img"
+            id="hero-portrait">
+        </div>
+
+        <!-- Hero Bottom Floating Controls -->
+        <div class="hero-bottom-bar">
+          <!-- Badges Group -->
+          <div class="hero-badges-group">
+            <div class="hero-mini-pill">
+              <span class="pill-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>FCAI Batch Representative</span>
+            </div>
+            <div class="hero-mini-pill">
+              <span class="pill-icon"><i class="fa-solid fa-handshake-angle"></i></span>
+              <span>8+ Years of Leadership & Volunteering</span>
+            </div>
+          </div>
+
+          <!-- Hero Main Action Button -->
+          <a href="#contact" class="btn btn-hero-cta" id="hero-main-cta">
+            <span>Let's Talk</span>
+            <div class="btn-icon-circle">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGO / TECH MARQUEE TICKER -->
+    <section class="ticker-section" aria-label="Core Competencies & Technologies">
+      <div class="ticker-wrapper">
+        <div class="ticker-track">
+          <!-- Item Set 1 -->
+          <div class="ticker-item"><i class="fa-brands fa-python"></i> Python</div>
+          <div class="ticker-item"><i class="fa-solid fa-brain"></i> Machine Learning</div>
+          <div class="ticker-item"><i class="fa-brands fa-react"></i> React.js</div>
+          <div class="ticker-item"><i class="fa-solid fa-network-wired"></i> Deep Learning</div>
+          <div class="ticker-item"><i class="fa-solid fa-robot"></i> Generative AI & RAG</div>
+          <div class="ticker-item"><i class="fa-solid fa-eye"></i> Computer Vision (OpenCV)</div>
+          <div class="ticker-item"><i class="fa-solid fa-bolt"></i> FastAPI & Flask</div>
+          <div class="ticker-item"><i class="fa-solid fa-chart-line"></i> Data Analytics & Plotly</div>
+          <div class="ticker-item"><i class="fa-solid fa-layer-group"></i> Redux Toolkit</div>
+          <div class="ticker-item"><i class="fa-solid fa-wand-magic-sparkles"></i> LangChain & FAISS</div>
+          <div class="ticker-item"><i class="fa-solid fa-certificate"></i> DEPI Graduate</div>
+          <div class="ticker-item"><i class="fa-solid fa-award"></i> ITI & NTI Certified</div>
+          <!-- Item Set 2 (Duplicated for seamless loop) -->
+          <div class="ticker-item"><i class="fa-brands fa-python"></i> Python</div>
+          <div class="ticker-item"><i class="fa-solid fa-brain"></i> Machine Learning</div>
+          <div class="ticker-item"><i class="fa-brands fa-react"></i> React.js</div>
+          <div class="ticker-item"><i class="fa-solid fa-network-wired"></i> Deep Learning</div>
+          <div class="ticker-item"><i class="fa-solid fa-robot"></i> Generative AI & RAG</div>
+          <div class="ticker-item"><i class="fa-solid fa-eye"></i> Computer Vision (OpenCV)</div>
+          <div class="ticker-item"><i class="fa-solid fa-bolt"></i> FastAPI & Flask</div>
+          <div class="ticker-item"><i class="fa-solid fa-chart-line"></i> Data Analytics & Plotly</div>
+          <div class="ticker-item"><i class="fa-solid fa-layer-group"></i> Redux Toolkit</div>
+          <div class="ticker-item"><i class="fa-solid fa-wand-magic-sparkles"></i> LangChain & FAISS</div>
+          <div class="ticker-item"><i class="fa-solid fa-certificate"></i> DEPI Graduate</div>
+          <div class="ticker-item"><i class="fa-solid fa-award"></i> ITI & NTI Certified</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLAGSHIP SHOWCASE BENTO GALLERY -->
+    <section class="showcase-bento-section" id="showcase">
+      <div class="container">
+        <div class="bento-container-card">
+          <div class="bento-header-bar">
+            <div class="bento-window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="bento-title-tag">Featured Architectures & Applications</div>
+            <div class="bento-live-badge"><span class="pulse-dot"></span> Interactive Previews</div>
+          </div>
+
+          <div class="bento-grid">
+            <!-- Bento Card 1: FarmTecH (Flagship AI) -->
+            <div class="bento-item bento-large farmtech-card" data-project-id="farmtech">
+              <div class="bento-card-bg-glow"></div>
+              <div class="bento-item-content">
+                <div class="bento-tag-row">
+                  <span class="bento-tag highlight"><i class="fa-solid fa-leaf"></i> Flagship AI Project</span>
+                  <span class="bento-tag">Deep RL & Vision</span>
+                </div>
+                <h3 class="bento-card-title">FarmTecH — Agricultural Decision Support System</h3>
+                <p class="bento-card-desc">Centralized decision engine integrating Deep Reinforcement Learning for crop
+                  rotation scheduling, Agri-LLaVA multimodal diagnostics, soil health analytics, and yield forecasting.
+                </p>
+                <div class="bento-metric-row">
+                  <div class="metric-box">
+                    <span class="metric-num">6+</span>
+                    <span class="metric-label">Intelligent Sub-modules</span>
+                  </div>
+                  <div class="metric-box">
+                    <span class="metric-num">Agri-LLaVA</span>
+                    <span class="metric-label">Multimodal Vision</span>
+                  </div>
+                  <div class="metric-box">
+                    <span class="metric-num">GIS & H3</span>
+                    <span class="metric-label">Geospatial Intelligence</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bento-item-preview">
+                <div class="mockup-frame ai-dashboard">
+                  <div class="mockup-nav">
+                    <span class="mock-brand">FarmTecH Engine</span>
+                    <span class="mock-status">Model: Active (v2.4)</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="mock-chart-row">
+                      <div class="mock-chart-item soil">
+                        <div class="chart-header"><span>Soil Nutrients (NPK)</span><span
+                            class="badge-good">Optimal</span></div>
+                        <div class="chart-bars">
+                          <div class="bar-col">
+                            <div class="bar-fill" style="height: 75%"></div><span>N</span>
+                          </div>
+                          <div class="bar-col">
+                            <div class="bar-fill" style="height: 60%"></div><span>P</span>
+                          </div>
+                          <div class="bar-col">
+                            <div class="bar-fill" style="height: 85%"></div><span>K</span>
+                          </div>
+                          <div class="bar-col">
+                            <div class="bar-fill" style="height: 70%"></div><span>pH</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mock-chart-item rl">
+                        <div class="chart-header"><span>Deep RL Policy</span><span class="badge-accent">Reward
+                            +94.2%</span></div>
+                        <div class="rl-state-diagram">
+                          <div class="state-node active">Crop A</div>
+                          <i class="fa-solid fa-arrow-right"></i>
+                          <div class="state-node next">Legume B</div>
+                          <i class="fa-solid fa-arrow-right"></i>
+                          <div class="state-node">Cover C</div>
+                        </div>
+                        <div class="rl-insight">Rotational soil replenishment calculated</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bento Card 2: Medical AI Assistant -->
+            <div class="bento-item bento-medium" data-project-id="medical-ai">
+              <div class="bento-item-content">
+                <div class="bento-tag-row">
+                  <span class="bento-tag"><i class="fa-solid fa-heart-pulse"></i> Computer Vision + RAG</span>
+                  <span class="bento-tag">FastAPI</span>
+                </div>
+                <h3 class="bento-card-title">Medical AI Diagnostic Assistant</h3>
+                <p class="bento-card-desc">ResNet50 medical imaging classifier coupled with a LangChain & FAISS
+                  generative knowledge assistant delivering contextual clinical explanations.</p>
+                <div class="mockup-chat-preview">
+                  <div class="chat-bubble user">
+                    <i class="fa-solid fa-file-medical"></i> X-Ray Scan Uploaded
+                  </div>
+                  <div class="chat-bubble bot">
+                    <i class="fa-solid fa-sparkles"></i> <strong>ResNet50 Analysis:</strong> No acute infiltration
+                    detected (98.4% conf). Verified with clinical literature via RAG.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bento Card 3: Enterprise E-Commerce Platform -->
+            <div class="bento-item bento-medium" data-project-id="ecommerce-platform">
+              <div class="bento-item-content">
+                <div class="bento-tag-row">
+                  <span class="bento-tag"><i class="fa-brands fa-react"></i> React & Redux</span>
+                  <span class="bento-tag">Framer Motion</span>
+                </div>
+                <h3 class="bento-card-title">Full-Scale E-Commerce Storefront</h3>
+                <p class="bento-card-desc">Dynamic multi-page catalog, 100+ items, multi-tier filtering, persistent
+                  Redux cart, and fluid Framer Motion transitions with checkout flow.</p>
+                <div class="mockup-store-preview">
+                  <div class="store-mini-card">
+                    <div class="store-pic"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div class="store-meta">
+                      <span class="item-name">Pro Workstation UI</span>
+                      <span class="item-price">$1,499</span>
+                    </div>
+                    <button class="store-btn">Add to Cart</button>
+                  </div>
+                  <div class="store-stats-badge">
+                    <i class="fa-solid fa-check"></i> 100% Responsive & Memoized
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bento Card 4: Admin Analytics Dashboard -->
+            <div class="bento-item bento-large admin-dash-card" data-project-id="admin-dashboard">
+              <div class="bento-item-content">
+                <div class="bento-tag-row">
+                  <span class="bento-tag highlight"><i class="fa-solid fa-chart-pie"></i> Enterprise Analytics</span>
+                  <span class="bento-tag">Chart.js & Context API</span>
+                </div>
+                <h3 class="bento-card-title">Admin Analytics & System Operations Dashboard</h3>
+                <p class="bento-card-desc">Internal operational hub featuring secure authentication, paginated large
+                  dataset tables, dynamic sales and user trends, and full CRUD controllers.</p>
+                <div class="dashboard-mini-metrics">
+                  <div class="mini-stat">
+                    <span class="stat-lbl">Active Users</span>
+                    <span class="stat-val">+14,820</span>
+                    <span class="stat-trend positive"><i class="fa-solid fa-arrow-trend-up"></i> +18.4%</span>
+                  </div>
+                  <div class="mini-stat">
+                    <span class="stat-lbl">Throughput</span>
+                    <span class="stat-val">120ms</span>
+                    <span class="stat-trend positive"><i class="fa-solid fa-bolt"></i> Fast</span>
+                  </div>
+                  <div class="mini-stat">
+                    <span class="stat-lbl">System Uptime</span>
+                    <span class="stat-val">99.98%</span>
+                    <span class="stat-trend positive"><i class="fa-solid fa-shield-halved"></i> Stable</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY / CORE STATEMENT SECTION -->
+    <section class="philosophy-section" id="about-philosophy">
+      <div class="container philosophy-container">
+        <div class="philosophy-eyebrow">
+          <span>Vision & Philosophy</span>
+        </div>
+
+        <div class="philosophy-content-wrap">
+          <!-- Floating Interactive Pill Tags -->
+          <div class="pill-tag pill-tag-1" data-skill="ai"><span class="pill-dot red"></span> Machine Learning</div>
+          <div class="pill-tag pill-tag-2" data-skill="react"><span class="pill-dot blue"></span> React.js UI</div>
+          <div class="pill-tag pill-tag-3" data-skill="dl"><span class="pill-dot dark"></span> Deep Learning</div>
+          <div class="pill-tag pill-tag-4" data-skill="cv"><span class="pill-dot yellow"></span> Computer Vision</div>
+          <div class="pill-tag pill-tag-5" data-skill="genai"><span class="pill-dot purple"></span> Generative AI</div>
+          <div class="pill-tag pill-tag-6" data-skill="dash"><span class="pill-dot green"></span> Data Analytics</div>
+
+          <h2 class="philosophy-headline">
+            Ahmed's focus is on blending <em>rigorous AI intelligence</em>, thoughtful architecture, and user empathy to
+            <strong>craft experiences</strong> that solve real problems.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION ("Here's how it works") -->
+    <section class="process-section" id="services">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="sub-pill">/ My Methodology</span>
+          <h2 class="section-title">Here's how it works</h2>
+        </div>
+
+        <div class="process-grid-wrapper">
+          <!-- SVG Connecting Doodle Line -->
+          <svg class="process-connector-svg" viewBox="0 0 900 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 180 60 C 280 10, 320 110, 450 60 C 580 10, 620 110, 720 60" stroke="#bbf246" stroke-width="3"
+              stroke-linecap="round" stroke-dasharray="8 8" />
+            <circle cx="450" cy="60" r="6" fill="#bbf246" />
+            <circle cx="720" cy="60" r="6" fill="#bbf246" />
+          </svg>
+
+          <div class="process-cards">
+            <!-- Step 01 -->
+            <div class="process-card">
+              <div class="process-number">01</div>
+              <h3 class="process-title">Discover</h3>
+              <p class="process-desc">Deep-diving into domain data, mapping out system requirements, identifying core
+                bottlenecks, and structuring a solid mathematical and architectural foundation.</p>
+              <ul class="process-list">
+                <li><i class="fa-solid fa-check"></i> Exploratory Data Analysis & Cleaning</li>
+                <li><i class="fa-solid fa-check"></i> Requirement Scoping & Architecture</li>
+                <li><i class="fa-solid fa-check"></i> Feasibility & Metric Definition</li>
+              </ul>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="process-card active-card">
+              <div class="process-number">02</div>
+              <h3 class="process-title">Design & Train</h3>
+              <p class="process-desc">Engineering bespoke machine learning models and modular React components.
+                Balancing performance, latency, accuracy, and intuitive user interaction.</p>
+              <ul class="process-list">
+                <li><i class="fa-solid fa-check"></i> Model Training, Tuning & Validation</li>
+                <li><i class="fa-solid fa-check"></i> Pixel-Perfect React Component UI</li>
+                <li><i class="fa-solid fa-check"></i> RAG & API Integration Pipelines</li>
+              </ul>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="process-card">
+              <div class="process-number">03</div>
+              <h3 class="process-title">Deliver</h3>
+              <p class="process-desc">Deploying robust, low-latency applications with clean APIs, interactive
+                dashboards, complete documentation, and automated monitoring.</p>
+              <ul class="process-list">
+                <li><i class="fa-solid fa-check"></i> FastAPI / Streamlit / Cloud Deployment</li>
+                <li><i class="fa-solid fa-check"></i> Real-Time Analytics & Monitoring</li>
+                <li><i class="fa-solid fa-check"></i> Continuous Iteration & Support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS / ENDORSEMENTS -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="quote-symbol"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="quote-text">
+              "Working with Ahmed on complex AI pipelines was a seamless experience. He possesses a rare combination of
+              deep machine learning theory and the ability to craft clean, responsive web front-ends that make models
+              usable."
+            </p>
+            <div class="quote-author">
+              <div class="author-avatar"><i class="fa-solid fa-user-tie"></i></div>
+              <div class="author-info">
+                <strong>Faculty & Project Stakeholder</strong>
+                <span>FCAI BSNU Research Initiative</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-symbol"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="quote-text">
+              "Ahmed brought exceptional discipline and speed to our React application. From translating Figma mockups
+              into reusable components to optimizing state and API calls, he consistently delivered beyond
+              expectations."
+            </p>
+            <div class="quote-author">
+              <div class="author-avatar"><i class="fa-solid fa-user-check"></i></div>
+              <div class="author-info">
+                <strong>Freelance Client</strong>
+                <span>Web Product Collaborator</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORKS / PROJECTS SECTION -->
+    <section class="works-section" id="works">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="sub-pill">/ Portfolio</span>
+          <h2 class="section-title">Selected Works</h2>
+          <p class="section-subtitle">Real-world AI architectures, machine learning engines, and high-performance React
+            web applications.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="works-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai-ds">AI & Machine Learning</button>
+          <button class="filter-btn" data-filter="frontend">Front-End & React</button>
+          <button class="filter-btn" data-filter="cv-nlp">Computer Vision & NLP</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-container">
+
+          <!-- Project 1: FarmTecH -->
+          <article class="project-card" data-category="ai-ds cv-nlp" data-project-id="farmtech">
+            <div class="project-card-image farmtech-bg">
+              <div class="project-overlay-badge"><i class="fa-solid fa-star"></i> Graduation / Flagship</div>
+              <div class="visual-mockup-wrapper">
+                <div class="mockup-dash-card">
+                  <div class="mockup-header-line">
+                    <span class="pill-accent">FarmTecH Engine</span>
+                    <span class="pill-tag-sm">Deep RL Active</span>
+                  </div>
+                  <div class="mockup-metric-grid">
+                    <div class="mockup-box">
+                      <span>Crop Recommendation</span>
+                      <strong>Wheat / Maize</strong>
+                    </div>
+                    <div class="mockup-box">
+                      <span>Soil Health Index</span>
+                      <strong>92.6 / 100</strong>
+                    </div>
+                  </div>
+                  <div class="mockup-status-line">
+                    <i class="fa-solid fa-circle-check"></i> Agri-LLaVA Diagnostics Online
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <div class="project-tags">
+                <span class="tag">Deep RL</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Agri-LLaVA</span>
+                <span class="tag">GIS</span>
+              </div>
+              <h3 class="project-title">FarmTecH — Agricultural Decision Support System</h3>
+              <p class="project-summary">Comprehensive AI-powered platform integrating Machine Learning, Deep Learning,
+                Deep Reinforcement Learning for crop rotation, and Agri-LLaVA for multimodal diagnosis.</p>
+              <div class="project-card-footer">
+                <button class="btn btn-card-details open-modal-btn" data-project="farmtech">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Medical AI Assistant -->
+          <article class="project-card" data-category="ai-ds cv-nlp" data-project-id="medical-ai">
+            <div class="project-card-image medical-bg">
+              <div class="project-overlay-badge">CV + RAG Engine</div>
+              <div class="visual-mockup-wrapper">
+                <div class="mockup-dash-card">
+                  <div class="mockup-header-line">
+                    <span class="pill-accent">Medical AI Assistant</span>
+                    <span class="pill-tag-sm">ResNet50 + FAISS</span>
+                  </div>
+                  <div class="mockup-chat-line">
+                    <span>Clinical Query:</span>
+                    <em>"Evaluate chest radiography patterns"</em>
+                  </div>
+                  <div class="mockup-status-line">
+                    <i class="fa-solid fa-brain"></i> Contextual RAG Response Generated
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <div class="project-tags">
+                <span class="tag">ResNet50</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">FAISS</span>
+                <span class="tag">FastAPI</span>
+              </div>
+              <h3 class="project-title">Medical AI Diagnostic & Knowledge Assistant</h3>
+              <p class="project-summary">Combines deep learning Computer Vision (ResNet50) for medical scan analysis
+                with LangChain & FAISS retrieval-augmented generation for instant clinical knowledge synthesis.</p>
+              <div class="project-card-footer">
+                <button class="btn btn-card-details open-modal-btn" data-project="medical-ai">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Full E-Commerce Platform -->
+          <article class="project-card" data-category="frontend" data-project-id="ecommerce-platform">
+            <div class="project-card-image ecommerce-bg">
+              <div class="project-overlay-badge">React Enterprise</div>
+              <div class="visual-mockup-wrapper">
+                <div class="mockup-dash-card">
+                  <div class="mockup-header-line">
+                    <span class="pill-accent">E-Storefront</span>
+                    <span class="pill-tag-sm">Redux Toolkit</span>
+                  </div>
+                  <div class="mockup-product-row">
+                    <div class="mock-item-thumb"><i class="fa-solid fa-bag-shopping"></i></div>
+                    <div class="mock-item-info">
+                      <span>Cart: 3 items</span>
+                      <strong>Total: $249.00</strong>
+                    </div>
+                  </div>
+                  <div class="mockup-status-line">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Framer Motion Transitions
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <div class="project-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">Redux Toolkit</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Framer Motion</span>
+              </div>
+              <h3 class="project-title">Full E-Commerce Web Application</h3>
+              <p class="project-summary">Production-grade storefront with dynamic filtering, real-time sorting across
+                100+ products, persistent centralized cart state, and interactive multi-step checkout.</p>
+              <div class="project-card-footer">
+                <button class="btn btn-card-details open-modal-btn" data-project="ecommerce-platform">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Admin Analytics Dashboard -->
+          <article class="project-card" data-category="frontend" data-project-id="admin-dashboard">
+            <div class="project-card-image dashboard-bg">
+              <div class="project-overlay-badge">Live Analytics</div>
+              <div class="visual-mockup-wrapper">
+                <div class="mockup-dash-card">
+                  <div class="mockup-header-line">
+                    <span class="pill-accent">Ops Console</span>
+                    <span class="pill-tag-sm">Chart.js</span>
+                  </div>
+                  <div class="mockup-metric-grid">
+                    <div class="mockup-box">
+                      <span>Revenue</span>
+                      <strong>$84,320</strong>
+                    </div>
+                    <div class="mockup-box">
+                      <span>Conversion</span>
+                      <strong>4.82%</strong>
+                    </div>
+                  </div>
+                  <div class="mockup-status-line">
+                    <i class="fa-solid fa-table"></i> Paginated CRUD Tables Active
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <div class="project-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">Chart.js</span>
+                <span class="tag">Context API</span>
+                <span class="tag">REST API</span>
+              </div>
+              <h3 class="project-title">Admin Analytics & Management System</h3>
+              <p class="project-summary">Internal administrative dashboard featuring authentication, live sales & user
+                trend visualization, memoized sortable data tables, and full CRUD workflows.</p>
+              <div class="project-card-footer">
+                <button class="btn btn-card-details open-modal-btn" data-project="admin-dashboard">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Real Estate Property Platform -->
+          <article class="project-card" data-category="frontend" data-project-id="real-estate">
+            <div class="project-card-image realestate-bg">
+              <div class="project-overlay-badge">Dark Mode & Search</div>
+              <div class="visual-mockup-wrapper">
+                <div class="mockup-dash-card">
+                  <div class="mockup-header-line">
+                    <span class="pill-accent">Luxury Estates</span>
+                    <span class="pill-tag-sm">React Router</span>
+                  </div>
+                  <div class="mockup-property-row">
+                    <div class="mock-prop-tag"><i class="fa-solid fa-house-chimney"></i> Villa Verde</div>
+                    <span class="mock-prop-price">$890,000</span>
+                  </div>
+                  <div class="mockup-status-line">
+                    <i class="fa-solid fa-moon"></i> Seamless Dark / Light Theming
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <div class="project-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">Dark Mode</span>
+                <span class="tag">Responsive UI</span>
+                <span class="tag">REST API</span>
+              </div>
+              <h3 class="project-title">Real Estate Property Portal</h3>
+              <p class="project-summary">Property listings platform with multi-parameter search (price, location, type),
+                listing detail views, inquiry workflows, and optimized media rendering.</p>
+              <div class="project-card-footer">
+                <button class="btn btn-card-details open-modal-btn" data-project="real-estate">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Medical Test Results Prediction -->
+          <article class="project-card" data-category="ai-ds" data-project-id="medical-test-pred">
+            <div class="project-card-image medpred-bg">
+              <div class="project-overlay-badge">Predictive ML & Dash</div>
+              <div class="visual-mockup-wrapper">
+                <div class="mockup-dash-card">
+                  <div class="mockup-header-line">
+                    <span class="pill-accent">Test Predictor</span>
+                    <span class="pill-tag-sm">XGBoost</span>
+                  </div>
+                  <div class="mockup-metric-grid">
+                    <div class="mockup-box">
+                      <span>Model ROC-AUC</span>
+                      <strong>0.952</strong>
+                    </div>
+                    <div class="mockup-box">
+                      <span>Latency</span>
+                      <strong>15ms</strong>
+                    </div>
+                  </div>
+                  <div class="mockup-status-line">
+                    <i class="fa-solid fa-chart-line"></i> Interactive Plotly Dashboards
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <div class="project-tags">
+                <span class="tag">XGBoost</span>
+                <span class="tag">Random Forest</span>
+                <span class="tag">Flask</span>
+                <span class="tag">Dash & Plotly</span>
+              </div>
+              <h3 class="project-title">Medical Test Results Prediction System</h3>
+              <p class="project-summary">End-to-end ML classification system benchmarking XGBoost against Random Forest
+                for patient test outcomes, coupled with an interactive Dash/Plotly exploration dashboard.</p>
+              <div class="project-card-footer">
+                <button class="btn btn-card-details open-modal-btn" data-project="medical-test-pred">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: E-Commerce Sentiment Analysis -->
+          <article class="project-card" data-category="ai-ds cv-nlp" data-project-id="sentiment-nlp">
+            <div class="project-card-image nlp-bg">
+              <div class="project-overlay-badge">Deep NLP</div>
+              <div class="visual-mockup-wrapper">
+                <div class="mockup-dash-card">
+                  <div class="mockup-header-line">
+                    <span class="pill-accent">Review Classifier</span>
+                    <span class="pill-tag-sm">LSTM / GRU</span>
+                  </div>
+                  <div class="mockup-chat-line">
+                    <span>Input:</span>
+                    <em>"Exceptional build quality and lightning shipping!"</em>
+                  </div>
+                  <div class="mockup-status-line">
+                    <i class="fa-solid fa-face-smile"></i> Sentiment: Positive (99.1%)
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <div class="project-tags">
+                <span class="tag">TensorFlow</span>
+                <span class="tag">LSTM & GRU</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Streamlit</span>
+              </div>
+              <h3 class="project-title">E-Commerce Reviews Sentiment Analysis</h3>
+              <p class="project-summary">Deep Learning text classification comparing CNN, RNN, LSTM, and GRU
+                architectures, deployed via an interactive Streamlit application for real-time customer sentiment
+                scoring.</p>
+              <div class="project-card-footer">
+                <button class="btn btn-card-details open-modal-btn" data-project="sentiment-nlp">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 8: Task & Project Management Board -->
+          <article class="project-card" data-category="frontend" data-project-id="task-board">
+            <div class="project-card-image taskboard-bg">
+              <div class="project-overlay-badge">Interactive DnD</div>
+              <div class="visual-mockup-wrapper">
+                <div class="mockup-dash-card">
+                  <div class="mockup-header-line">
+                    <span class="pill-accent">Kanban Flow</span>
+                    <span class="pill-tag-sm">DnD Engine</span>
+                  </div>
+                  <div class="mockup-kanban-cols">
+                    <div class="k-col"><span>To Do</span>
+                      <div class="k-item">Auth</div>
+                    </div>
+                    <div class="k-col active"><span>In Progress</span>
+                      <div class="k-item">API</div>
+                    </div>
+                    <div class="k-col"><span>Done</span>
+                      <div class="k-item">UI</div>
+                    </div>
+                  </div>
+                  <div class="mockup-status-line">
+                    <i class="fa-solid fa-arrows-up-down-left-right"></i> Smooth Drag & Drop Synced
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <div class="project-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">react-beautiful-dnd</span>
+                <span class="tag">Context API</span>
+              </div>
+              <h3 class="project-title">Interactive Task & Project Management Platform</h3>
+              <p class="project-summary">Trello-style productivity platform featuring dynamic board creation, category
+                filtering, accessible drag-and-drop task reordering, and backend synchronization.</p>
+              <div class="project-card-footer">
+                <button class="btn btn-card-details open-modal-btn" data-project="task-board">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 9: Smart Image Processing Studio -->
+          <article class="project-card" data-category="ai-ds cv-nlp" data-project-id="cv-studio">
+            <div class="project-card-image cvstudio-bg">
+              <div class="project-overlay-badge">OpenCV Interactive</div>
+              <div class="visual-mockup-wrapper">
+                <div class="mockup-dash-card">
+                  <div class="mockup-header-line">
+                    <span class="pill-accent">CV Studio</span>
+                    <span class="pill-tag-sm">OpenCV 4</span>
+                  </div>
+                  <div class="mockup-metric-grid">
+                    <div class="mockup-box">
+                      <span>Algorithm</span>
+                      <strong>Watershed</strong>
+                    </div>
+                    <div class="mockup-box">
+                      <span>Edge Detect</span>
+                      <strong>Hough Lines</strong>
+                    </div>
+                  </div>
+                  <div class="mockup-status-line">
+                    <i class="fa-solid fa-sliders"></i> Real-time Parameter Tuning
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <div class="project-tags">
+                <span class="tag">OpenCV</span>
+                <span class="tag">Python</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Image Segmentation</span>
+              </div>
+              <h3 class="project-title">Smart Image Processing Studio</h3>
+              <p class="project-summary">Interactive computer vision sandbox implementing morphological operations,
+                Hough Transform, Watershed segmentation, and live side-by-side parameter adjustments.</p>
+              <div class="project-card-footer">
+                <button class="btn btn-card-details open-modal-btn" data-project="cv-studio">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & EXPERIENCE SECTION -->
+    <section class="about-experience-section" id="about">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="sub-pill">/ Profile & Journey</span>
+          <h2 class="section-title">Building Intelligent Solutions <span class="title-highlight">with AI &
+              Software</span></h2>
+        </div>
+
+        <div class="about-layout-grid">
+          <!-- Left Column: Portrait & Highlights Card -->
+          <div class="about-card-left">
+            <div class="about-photo-frame">
+              <img src="ahmed-portrait.png" alt="Ahmed Mabrouk" class="about-img">
+              <div class="about-photo-badge">
+                <i class="fa-solid fa-award"></i>
+                <span>FCAI Batch Representative</span>
+              </div>
+            </div>
+
+            <div class="about-social-links">
+              <a href="https://linkedin.com/in/ahmed-mabrouk-7a7313309" target="_blank" rel="noopener"
+                class="social-circle-btn" title="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener" class="social-circle-btn"
+                title="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="mailto:ahmed.mabrouk2003a@gmail.com" class="social-circle-btn" title="Send Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="https://wa.me/201124953930" target="_blank" rel="noopener" class="social-circle-btn"
+                title="WhatsApp Message">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </div>
+
+            <!-- Resume Download Cards -->
+            <div class="about-cv-box">
+              <div class="cv-card-mini">
+                <div class="cv-mini-icon ai"><i class="fa-solid fa-brain"></i></div>
+                <div class="cv-mini-details">
+                  <strong>AI & Data Science Resume</strong>
+                  <span>Full Technical Profile (.docx)</span>
+                </div>
+                <a href="Ahmed_Mabrouk_AI_DataScience_CV.docx" download class="btn-cv-download" title="Download AI CV">
+                  <i class="fa-solid fa-download"></i>
+                </a>
+              </div>
+
+              <div class="cv-card-mini">
+                <div class="cv-mini-icon fe"><i class="fa-solid fa-code"></i></div>
+                <div class="cv-mini-details">
+                  <strong>Front-End Developer Resume</strong>
+                  <span>React.js Specialist Profile (.pdf)</span>
+                </div>
+                <a href="Ahmed_Mabrouk_CV.pdf" download class="btn-cv-download" title="Download Front-End CV">
+                  <i class="fa-solid fa-download"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative & Experience Timeline -->
+          <div class="about-card-right" id="experience">
+            <div class="about-narrative">
+              <p class="lead-bio">
+                A recent Artificial Intelligence graduate with a strong foundation in AI, Data Science, Machine
+                Learning, and Deep Learning, combined with 2 years of freelance Front-End development experience using
+                React.js.
+              </p>
+              <p class="sub-bio">
+                Experienced in end-to-end AI and Data Science workflows, including data analysis, feature engineering,
+                machine learning, deep learning, NLP, computer vision, Generative AI and RAG. Also experienced in
+                building responsive web applications and integrating APIs using React.js and modern web technologies.
+              </p>
+            </div>
+
+            <!-- Experience & Milestones Table -->
+            <div class="experience-timeline">
+              <h3 class="exp-table-heading">EXPERIENCE & MILESTONES</h3>
+
+              <div class="exp-row">
+                <div class="exp-role-col">
+                  <strong>Front-End Developer (React.js)</strong>
+                  <span class="exp-sub">Freelance — Web Applications & Portfolios</span>
+                </div>
+                <div class="exp-org-col">Freelance Clients</div>
+                <div class="exp-date-col">2024 – Present</div>
+              </div>
+
+              <div class="exp-row">
+                <div class="exp-role-col">
+                  <strong>AI & Data Science Projects</strong>
+                  <span class="exp-sub">Academic & Personal Projects</span>
+                </div>
+                <div class="exp-org-col">Machine Learning • Deep Learning • NLP • CV • GenAI</div>
+                <div class="exp-date-col">2025 – Present</div>
+              </div>
+
+              <div class="exp-row">
+                <div class="exp-role-col">
+                  <strong>Batch Leader & Student Representative</strong>
+                  <span class="exp-sub">Official communication bridge & technical coordinator</span>
+                </div>
+                <div class="exp-org-col">FCAI — Beni Suef National University</div>
+                <div class="exp-date-col">2020 – 2024</div>
+              </div>
+
+              <div class="exp-row">
+                <div class="exp-role-col">
+                  <strong>Specialized Technical Training</strong>
+                  <span class="exp-sub">Data Science • ML • Deep Learning • Generative AI</span>
+                </div>
+                <div class="exp-org-col">DEPI • NTI • ITI</div>
+                <div class="exp-date-col">2024 – 2025</div>
+              </div>
+            </div>
+
+            <!-- Core Skill Badges Grid -->
+            <div class="skills-highlight-grid">
+              <div class="skill-pill-item"><i class="fa-solid fa-code"></i> Python / TypeScript / ES6+</div>
+              <div class="skill-pill-item"><i class="fa-brands fa-react"></i> React.js & Redux Toolkit</div>
+              <div class="skill-pill-item"><i class="fa-solid fa-brain"></i> Scikit-Learn & XGBoost</div>
+              <div class="skill-pill-item"><i class="fa-solid fa-network-wired"></i> TensorFlow / PyTorch</div>
+              <div class="skill-pill-item"><i class="fa-solid fa-robot"></i> RAG & LangChain / FAISS</div>
+              <div class="skill-pill-item"><i class="fa-solid fa-eye"></i> OpenCV & ResNet50</div>
+              <div class="skill-pill-item"><i class="fa-solid fa-chart-pie"></i> Dash / Plotly / Power BI</div>
+              <div class="skill-pill-item"><i class="fa-solid fa-server"></i> FastAPI / Flask / Streamlit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION (CTA) BANNER -->
+    <section class="cta-banner-section" id="cta-banner">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="cta-glow-backdrop"></div>
+          <div class="cta-content">
+            <span class="cta-sub-tag"><i class="fa-solid fa-sparkles"></i> Let's Collaborate</span>
+            <h2 class="cta-headline">Let's Make It Happen</h2>
+            <p class="cta-subhead">Always open to new opportunities, freelance collaborations, and ambitious AI & web
+              engineering projects. Let's work together to bring your ideas to life.</p>
+            <div class="cta-btn-group">
+              <a href="#contact" class="btn btn-dark cta-main-btn" id="cta-talk-btn">
+                <span>Let's Talk</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="https://wa.me/201124953930" target="_blank" rel="noopener"
+                class="btn btn-outline cta-secondary-btn">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="sub-pill">/ Get in Touch</span>
+          <h2 class="section-title">Start a Conversation</h2>
+          <p class="section-subtitle">Whether you have a specific AI challenge, need a React web solution, or want to
+            discuss full-time/contract roles, feel free to reach out directly.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-cards">
+            <!-- Email -->
+            <div class="info-card">
+              <div class="info-card-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="info-card-content">
+                <span class="info-label">Email</span>
+                <a href="mailto:ahmed.mabrouk2003a@gmail.com" class="info-value">ahmed.mabrouk2003a@gmail.com</a>
+              </div>
+              <button class="copy-btn" data-copy="ahmed.mabrouk2003a@gmail.com" title="Copy email">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- Phone / WhatsApp -->
+            <div class="info-card">
+              <div class="info-card-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="info-card-content">
+                <span class="info-label">Phone / WhatsApp</span>
+                <a href="tel:+201124953930" class="info-value">+20 112 495 3930</a>
+              </div>
+              <button class="copy-btn" data-copy="+201124953930" title="Copy phone number">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- Location -->
+            <div class="info-card">
+              <div class="info-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="info-card-content">
+                <span class="info-label">Location</span>
+                <span class="info-value">Beni Suef, Egypt (Open to Remote & Relocation)</span>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="info-card">
+              <div class="info-card-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div class="info-card-content">
+                <span class="info-label">LinkedIn</span>
+                <a href="https://linkedin.com/in/ahmed-mabrouk-7a7313309" target="_blank" rel="noopener"
+                  class="info-value">linkedin.com/in/ahmed-mabrouk-7a7313309</a>
+              </div>
+              <a href="https://linkedin.com/in/ahmed-mabrouk-7a7313309" target="_blank" rel="noopener"
+                class="external-link-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Name</label>
+                  <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Your Email</label>
+                  <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Topic / Project Interest</label>
+                <select id="contact-subject" name="subject" required>
+                  <option value="" disabled selected>Select an area...</option>
+                  <option value="AI & Machine Learning Solution">AI & Machine Learning Solution</option>
+                  <option value="Front-End / React Web Application">Front-End / React Web Application</option>
+                  <option value="End-to-End AI Web App Integration">End-to-End AI Web App Integration</option>
+                  <option value="Full-Time / Contract Role Discussion">Full-Time / Contract Role Discussion</option>
+                  <option value="Other Inquiry">Other Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="5"
+                  placeholder="Tell me about your goals, timelines, or questions..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit full-width" id="form-submit-btn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+
+              <div class="form-feedback" id="form-feedback" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top-row">
+        <div class="footer-brand">
+          <span class="footer-logo">Ahmed Mabrouk</span>
+          <p class="footer-sub">AI Engineer & React Front-End Specialist</p>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#works">Selected Works</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+          <a href="admin.html" style="color: #bbf246; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;"><i class="fa-solid fa-shield-halved"></i> Admin Portal</a>
+        </nav>
+
+        <div class="footer-copy-text" style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+          <span>&copy; <span id="current-year"></span> Ahmed Mabrouk. All rights reserved.</span>
+          <a href="admin.html" style="color: #868c7e; font-size: 0.82rem; text-decoration: none; display: inline-flex; align-items: center; gap: 5px;"><i class="fa-solid fa-lock"></i> Admin Inbox</a>
+        </div>
+      </div>
+
+      <!-- GIANT SIGNATURE TYPOGRAPHY (Matching Elian Ross in reference) -->
+      <div class="footer-giant-signature" aria-hidden="true">
+        <span>Ahmed Mabrouk</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-project-title">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body" id="modal-content-target">
+        <!-- Content injected dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-notification" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>

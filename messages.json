@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1727236500000",
+    "name": "Dr. Tarek Omar",
+    "email": "tarek.omar@example.com",
+    "subject": "AI & Machine Learning Solution",
+    "message": "Hi Ahmed, we reviewed your work on FarmTecH and were very impressed with the Deep RL integration. We'd love to discuss a potential collaboration on an agricultural AI project.",
+    "date": "2026-09-24T18:45:00.000Z",
+    "read": false
+  },
+  {
+    "id": "1727233200000",
+    "name": "Sara Khalil",
+    "email": "sara.khalil@techflow.io",
+    "subject": "Front-End / React Web Application",
+    "message": "Hello Ahmed! We have an enterprise analytics portal mockup ready in Figma and need a high-level React specialist to build the frontend with Framer Motion animations. Are you available for a quick call this week?",
+    "date": "2026-09-24T14:15:00.000Z",
+    "read": true
+  }
+]
